@@ -6,8 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_cache/src/cached_image_provider.dart';
 
-export 'package:dio_cache_interceptor/dio_cache_interceptor.dart'
-    show CachePolicy;
+export 'package:dio_cache_interceptor/dio_cache_interceptor.dart' show CachePolicy;
 
 /// TileProvider with additional caching functionality
 class CachedTileProvider extends TileProvider {
@@ -47,7 +46,6 @@ class CachedTileProvider extends TileProvider {
           policy: cachePolicy,
           maxStale: maxStale,
           keyBuilder: keyBuilder ?? CacheOptions.defaultCacheKeyBuilder,
-          hitCacheOnErrorExcept: hitCacheOnErrorExcept,
         ),
       ),
     ]);
